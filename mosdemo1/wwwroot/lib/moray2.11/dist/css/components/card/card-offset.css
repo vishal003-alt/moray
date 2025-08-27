@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.card-offset {
+  display: flex; }
+  @media (min-width: 860px) {
+    .card-offset {
+      padding-top: 3rem; } }
+  .card-offset .card-body {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding: 1.5rem; }
+    @media (min-width: 860px) {
+      .card-offset .card-body {
+        padding: 3rem; } }
+  .card-offset .card-img {
+    padding: 0; }
+    @media (max-width: 859.98px) {
+      html:not([dir="rtl"]) .card-offset .card-img {
+        padding-left: 1.5rem; }
+      html[dir="rtl"] .card-offset .card-img {
+        padding-right: 1.5rem; } }
+    @media (min-width: 860px) {
+      .card-offset .card-img {
+        margin-top: -3rem;
+        margin-bottom: 3rem; } }
+  @media (max-width: 859.98px) {
+    .card-offset:not(.flipped) {
+      padding-bottom: 1.5rem; } }
+  @media (min-width: 860px) {
+    html:not([dir="rtl"]) .card-offset:not(.flipped) {
+      padding-right: 3rem; }
+    html[dir="rtl"] .card-offset:not(.flipped) {
+      padding-left: 3rem; }
+    html:not([dir="rtl"]) .card-offset:not(.flipped) .card-body {
+      padding-right: 0; }
+    html[dir="rtl"] .card-offset:not(.flipped) .card-body {
+      padding-left: 0; } }
+  @media (max-width: 859.98px) {
+    .card-offset:not(.flipped) .card-img {
+      margin-bottom: -1.5rem; } }
+  @media (min-width: 860px) {
+    html:not([dir="rtl"]) .card-offset:not(.flipped) .card-img {
+      margin-right: -3rem;
+      margin-left: 3rem; }
+    html[dir="rtl"] .card-offset:not(.flipped) .card-img {
+      margin-right: 3rem;
+      margin-left: -3rem; } }
+  @media (max-width: 859.98px) {
+    .card-offset.flipped {
+      padding-top: 1.5rem; } }
+  @media (min-width: 860px) {
+    html:not([dir="rtl"]) .card-offset.flipped {
+      padding-left: 3rem; }
+    html[dir="rtl"] .card-offset.flipped {
+      padding-right: 3rem; }
+    html:not([dir="rtl"]) .card-offset.flipped .card-body {
+      padding-left: 0; }
+    html[dir="rtl"] .card-offset.flipped .card-body {
+      padding-right: 0; } }
+  @media (max-width: 859.98px) {
+    .card-offset.flipped .card-img {
+      margin-top: -1.5rem; } }
+  @media (min-width: 860px) {
+    html:not([dir="rtl"]) .card-offset.flipped .card-img {
+      margin-right: 3rem;
+      margin-left: -3rem; }
+    html[dir="rtl"] .card-offset.flipped .card-img {
+      margin-right: -3rem;
+      margin-left: 3rem; } }
+  .card-offset.card-offset-small .card-body {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    @media (min-width: 860px) {
+      .card-offset.card-offset-small .card-body {
+        padding-top: 3rem;
+        padding-bottom: 3rem; } }
+  @media (min-width: 860px) {
+    .card-offset.card-offset-small .card-img {
+      margin-top: -1.5rem;
+      margin-bottom: 1.5rem; } }
+  @media (min-width: 860px) {
+    .card-offset.card-offset-small {
+      padding-top: 1.5rem; }
+      html:not([dir="rtl"]) .card-offset.card-offset-small:not(.flipped) {
+        padding-right: 1.5rem; }
+      html[dir="rtl"] .card-offset.card-offset-small:not(.flipped) {
+        padding-left: 1.5rem; }
+      html:not([dir="rtl"]) .card-offset.card-offset-small:not(.flipped) .card-img {
+        margin-right: -1.5rem;
+        margin-left: 1.5rem; }
+      html[dir="rtl"] .card-offset.card-offset-small:not(.flipped) .card-img {
+        margin-right: 1.5rem;
+        margin-left: -1.5rem; }
+      html:not([dir="rtl"]) .card-offset.card-offset-small.flipped {
+        padding-left: 1.5rem; }
+      html[dir="rtl"] .card-offset.card-offset-small.flipped {
+        padding-right: 1.5rem; }
+      html:not([dir="rtl"]) .card-offset.card-offset-small.flipped .card-img {
+        margin-right: 1.5rem;
+        margin-left: -1.5rem; }
+      html[dir="rtl"] .card-offset.card-offset-small.flipped .card-img {
+        margin-right: -1.5rem;
+        margin-left: 1.5rem; } }

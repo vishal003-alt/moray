@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.form-star-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0; }
+
+.form-star-label {
+  pointer-events: none;
+  margin: 0; }
+
+html:not([dir="rtl"]) .form-star-checked-label {
+  margin-left: 0.75rem; }
+
+html[dir="rtl"] .form-star-checked-label {
+  margin-right: 0.75rem; }
+
+.form-star-glyph {
+  display: block;
+  position: relative;
+  width: 2.5625rem;
+  height: 2.5625rem; }
+  html:not([dir="rtl"]) .form-star-glyph {
+    margin-left: -2.5625rem; }
+  html[dir="rtl"] .form-star-glyph {
+    margin-right: -2.5625rem; }
+  .form-star-glyph::after {
+    content: "";
+    color: #0067b8;
+    position: absolute;
+    font-family: "MWF-FLUENT-ICONS";
+    line-height: 1;
+    display: block;
+    top: 0.125rem;
+    left: 0.125rem;
+    font-size: 2.3125rem;
+    height: 2.3125rem;
+    width: 2.3125rem; }
+    .theme-dark .form-star-glyph::after {
+      color: #3aa0fa; }
+
+.form-star-input {
+  width: 2.5625rem;
+  height: 2.5625rem;
+  opacity: 0;
+  cursor: pointer; }
+  .form-star-input.disabled, .form-star-input:disabled {
+    cursor: auto; }
+    .form-star-input.disabled + .form-star-label > .form-star-glyph::after, .form-star-input:disabled + .form-star-label > .form-star-glyph::after {
+      opacity: 0.42;
+      color: #000; }
+      .theme-dark .form-star-input.disabled + .form-star-label > .form-star-glyph::after, .theme-dark .form-star-input:disabled + .form-star-label > .form-star-glyph::after {
+        color: #fff; }
+    .form-star-input.disabled ~ .form-star-checked-label, .form-star-input:disabled ~ .form-star-checked-label {
+      opacity: 0.55; }
+  .form-star-input:checked ~ .form-star-label > .form-star-glyph::after {
+    content: "";
+    color: #505050; }
+    .theme-dark .form-star-input:checked ~ .form-star-label > .form-star-glyph::after {
+      color: #e6e6e6; }
+  .form-star-input:checked.disabled ~ .form-star-label > .form-star-glyph::after,
+  .form-star-input:checked:disabled ~ .form-star-label > .form-star-glyph::after {
+    opacity: 0.3;
+    color: #757575; }
+    .theme-dark .form-star-input:checked.disabled ~ .form-star-label > .form-star-glyph::after, .theme-dark
+    .form-star-input:checked:disabled ~ .form-star-label > .form-star-glyph::after {
+      color: #d2d2d2; }
+  .form-star-input:checked + .form-star-label > .form-star-glyph::after {
+    content: "";
+    color: #0067b8; }
+    .theme-dark .form-star-input:checked + .form-star-label > .form-star-glyph::after {
+      color: #3aa0fa; }
+  .form-star-input:checked.disabled + .form-star-label > .form-star-glyph::after,
+  .form-star-input:checked:disabled + .form-star-label > .form-star-glyph::after {
+    opacity: 0.42;
+    color: #000; }
+    .theme-dark .form-star-input:checked.disabled + .form-star-label > .form-star-glyph::after, .theme-dark
+    .form-star-input:checked:disabled + .form-star-label > .form-star-glyph::after {
+      color: #fff; }
+  .form-star-input:focus + .form-star-label > .form-star-glyph {
+    outline: 0.1875rem dotted currentColor;
+    outline-offset: 0.125rem;
+    outline-offset: -0.125rem; }
+
+.form-star {
+  display: inline-flex;
+  align-items: center; }
+  .form-star:hover .form-star-input:not(:disabled):not(.disabled) ~ .form-star-label > .form-star-glyph::after {
+    content: "";
+    color: #0067b8; }
+    .theme-dark .form-star:hover .form-star-input:not(:disabled):not(.disabled) ~ .form-star-label > .form-star-glyph::after {
+      color: #3aa0fa; }
+  .form-star:hover .form-star-input:not(:disabled):not(.disabled):hover ~ .form-star-label > .form-star-glyph::after {
+    content: "";
+    color: #505050; }
+    .theme-dark .form-star:hover .form-star-input:not(:disabled):not(.disabled):hover ~ .form-star-label > .form-star-glyph::after {
+      color: #e6e6e6; }
+  .form-star:hover .form-star-input:not(:disabled):not(.disabled):hover + .form-star-label > .form-star-glyph::after {
+    content: "";
+    color: #0067b8; }
+    .theme-dark .form-star:hover .form-star-input:not(:disabled):not(.disabled):hover + .form-star-label > .form-star-glyph::after {
+      color: #3aa0fa; }
+
+.form-star-empty .form-star-input + .form-star-label > .form-star-glyph::after {
+  content: "";
+  color: #505050; }
+  .theme-dark .form-star-empty .form-star-input + .form-star-label > .form-star-glyph::after {
+    color: #e6e6e6; }
+
+.form-star-empty .form-star-input:disabled + .form-star-label > .form-star-glyph::after, .form-star-empty .form-star-input.disabled + .form-star-label > .form-star-glyph::after {
+  opacity: 0.3;
+  color: #757575; }
+  .theme-dark .form-star-empty .form-star-input:disabled + .form-star-label > .form-star-glyph::after, .theme-dark .form-star-empty .form-star-input.disabled + .form-star-label > .form-star-glyph::after {
+    color: #d2d2d2; }

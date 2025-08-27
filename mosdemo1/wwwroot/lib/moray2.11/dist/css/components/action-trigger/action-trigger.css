@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.action-trigger {
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  gap: 0.4375rem;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+  color: #0067b8;
+  text-decoration: underline;
+  outline-offset: 0.25rem;
+  cursor: pointer; }
+  .theme-dark .action-trigger {
+    color: #3aa0fa; }
+  .action-trigger:disabled, .action-trigger.disabled {
+    cursor: default;
+    opacity: 0.3; }
+  .action-trigger.inactive {
+    cursor: default;
+    text-decoration: none;
+    color: #757575; }
+    .theme-dark .action-trigger.inactive {
+      color: #d2d2d2; }
+  .action-trigger .glyph,
+  .action-trigger .glyph-append,
+  .action-trigger .glyph-prepend {
+    display: flex;
+    align-items: center;
+    padding-top: 0.125rem; }
+
+html:not([dir="rtl"]) .glyph-prepend {
+  padding-right: 0.4375rem; }
+
+html[dir="rtl"] .glyph-prepend {
+  padding-left: 0.4375rem; }
+
+html:not([dir="rtl"]) .glyph-append {
+  padding-left: 0.4375rem; }
+
+html[dir="rtl"] .glyph-append {
+  padding-right: 0.4375rem; }
+
+a.action-trigger.disabled,
+fieldset:disabled a.action-trigger {
+  pointer-events: none; }

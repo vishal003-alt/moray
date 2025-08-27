@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.result-list {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  border: 0.0625rem solid #e6e6e6;
+  display: none;
+  background-color: #fff;
+  color: #000; }
+  .theme-dark .result-list {
+    background-color: #000;
+    color: #fff; }
+  .result-list.active {
+    display: block; }
+  .result-list .result {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+    .result-list .result.selected, .result-list .result:hover, .result-list .result:focus {
+      outline: 0.1875rem dotted currentColor !important;
+      outline-offset: -0.1875rem;
+      background-color: #0067b8;
+      color: #fff; }
+      .theme-dark .result-list .result.selected, .theme-dark .result-list .result:hover, .theme-dark .result-list .result:focus {
+        background-color: #3aa0fa;
+        color: #000; }
+
+.search-results-container {
+  position: relative; }

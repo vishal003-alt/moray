@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.alert {
+  border: 0.0625rem solid transparent;
+  border-radius: 0.125rem;
+  min-height: 3.625rem;
+  position: relative;
+  display: flex;
+  padding: 1rem 1.5rem;
+  background-color: #e6e6e6;
+  color: #000; }
+  .alert a {
+    color: #0067b8; }
+  .theme-dark .alert {
+    background-color: #505050;
+    color: #fff; }
+    .theme-dark .alert a {
+      color: #fff; }
+  .alert.glyph-prepend::before, .alert.glyph::before {
+    font-size: 1.25rem;
+    margin-top: 0.125rem; }
+    html:not([dir="rtl"]) .alert.glyph-prepend::before, html:not([dir="rtl"]) .alert.glyph::before {
+      padding-right: 0.75rem; }
+    html[dir="rtl"] .alert.glyph-prepend::before, html[dir="rtl"] .alert.glyph::before {
+      padding-left: 0.75rem; }
+  .alert .glyph-prepend,
+  .alert .glyph {
+    margin-top: 0.125rem; }
+    html:not([dir="rtl"]) .alert .glyph-prepend, html:not([dir="rtl"])
+    .alert .glyph {
+      padding-right: 0.75rem; }
+    html[dir="rtl"] .alert .glyph-prepend, html[dir="rtl"]
+    .alert .glyph {
+      padding-left: 0.75rem; }
+    .alert .glyph-prepend::before,
+    .alert .glyph::before {
+      font-size: 1.25rem; }
+  .alert.alert-full-bleed {
+    border-radius: 0;
+    display: flex;
+    justify-content: center; }
+    .alert.alert-full-bleed .alert-content {
+      max-width: 1600px; }
+  .alert .alert-content .glyph::before {
+    font-size: inherit; }
+  html:not([dir="rtl"]) .alert .alert-content .glyph {
+    padding-right: 0; }
+  html[dir="rtl"] .alert .alert-content .glyph {
+    padding-left: 0; }
+  @media (min-width: 540px) {
+    .alert .alert-content {
+      max-width: 39rem; } }
+  @media (min-width: 860px) {
+    .alert .alert-content {
+      max-width: 40rem; } }
+  @media (min-width: 1084px) {
+    .alert .alert-content {
+      max-width: 48rem; } }
+  @media (min-width: 1400px) {
+    .alert .alert-content {
+      max-width: 59rem; } }
+  .alert .alert-content > :last-child {
+    margin-bottom: 0 !important; }
+  .alert .close {
+    position: absolute;
+    padding: 0.5rem;
+    color: inherit;
+    top: 0.75rem; }
+    html:not([dir="rtl"]) .alert .close {
+      right: 0.75rem; }
+    html[dir="rtl"] .alert .close {
+      left: 0.75rem; }
+  .alert hr,
+  .alert .divider {
+    margin: 0.75rem 0 0.5rem; }
+
+html:not([dir="rtl"]) .alert-dismissible {
+  padding-right: 4rem; }
+
+html[dir="rtl"] .alert-dismissible {
+  padding-left: 4rem; }

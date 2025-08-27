@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.link-group {
+  min-height: 2.5rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem; }
+  html:not([dir="rtl"]) .link-group a, html:not([dir="rtl"])
+  .link-group .btn, html:not([dir="rtl"])
+  .link-group .action-trigger {
+    margin-right: 1.5rem; }
+  html[dir="rtl"] .link-group a, html[dir="rtl"]
+  .link-group .btn, html[dir="rtl"]
+  .link-group .action-trigger {
+    margin-left: 1.5rem; }
+  .link-group a {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .link-group a ~ a:not(.btn) {
+    margin-top: 0; }
+  .link-group .btn,
+  .link-group .action-trigger {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; }
+  .link-group .btn ~ a:not(.btn) {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+  html:not([dir="rtl"]) .link-group > :last-child {
+    margin-right: 0; }
+  html[dir="rtl"] .link-group > :last-child {
+    margin-left: 0; }

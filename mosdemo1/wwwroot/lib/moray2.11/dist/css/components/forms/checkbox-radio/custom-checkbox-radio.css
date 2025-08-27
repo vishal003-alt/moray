@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+  .custom-control-input.disabled ~ .custom-control-label,
+  .custom-control-input:disabled ~ .custom-control-label {
+    opacity: 0.55; }
+    .theme-dark .custom-control-input.disabled ~ .custom-control-label::before, .theme-dark
+    .custom-control-input:disabled ~ .custom-control-label::before {
+      border-color: #d2d2d2; }
+  .custom-control-input.disabled:checked ~ .custom-control-label::before,
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    opacity: 0.76364; }
+
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0; }
+  .custom-control-label::before {
+    pointer-events: none;
+    border: 0.125rem solid #505050;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    background-color: #fff; }
+    @media (prefers-reduced-motion: reduce) {
+      .custom-control-label::before {
+        transition: none; } }
+    .theme-dark .custom-control-label::before {
+      background-color: #000; }
+  .custom-control-label .custom-control-glyph::before {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    border: 0.125rem solid transparent;
+    background-clip: content-box;
+    font-family: "MWF-FLUENT-ICONS";
+    line-height: 1; }
+  .custom-control-label::before,
+  .custom-control-label .custom-control-glyph::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0.125rem;
+    width: 1.25rem;
+    height: 1.25rem; }
+    html:not([dir="rtl"]) .custom-control-label::before, html:not([dir="rtl"])
+    .custom-control-label .custom-control-glyph::before {
+      left: -1.75rem; }
+    html[dir="rtl"] .custom-control-label::before, html[dir="rtl"]
+    .custom-control-label .custom-control-glyph::before {
+      right: -1.75rem; }
+
+html:not([dir="rtl"]) .custom-checkbox, html:not([dir="rtl"])
+.custom-radio {
+  padding-left: 1.75rem; }
+
+html[dir="rtl"] .custom-checkbox, html[dir="rtl"]
+.custom-radio {
+  padding-right: 1.75rem; }
+
+.form-group .custom-checkbox ~ .custom-checkbox:not(.custom-control-inline),
+.form-group .custom-radio ~ .custom-radio:not(.custom-control-inline) {
+  margin-top: 0.75rem; }
+
+.form-group .custom-checkbox.custom-control-inline,
+.form-group .custom-radio.custom-control-inline {
+  margin-bottom: 0.75rem; }
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0.125rem; }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: transparent;
+  background-color: #0067b8; }
+  .theme-dark .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #3aa0fa; }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label .custom-control-glyph::before {
+  content: "";
+  color: #fff; }
+  .theme-dark .custom-checkbox .custom-control-input:checked ~ .custom-control-label .custom-control-glyph::before {
+    color: #000; }
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+  border-color: transparent;
+  background-color: #0067b8; }
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label .custom-control-glyph::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 171.16 173.33'%3E%3Cpath fill='%23fff' d='M0 90.93v-10.7h171.16v10.7H0z'/%3E%3C/svg%3E"); }
+
+.custom-checkbox .custom-control-input.disabled:checked ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  background: #000; }
+  .theme-dark .custom-checkbox .custom-control-input.disabled:checked ~ .custom-control-label::before, .theme-dark
+  .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background: #fff; }
+
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  outline: 0.1875rem dotted currentColor;
+  outline-offset: 0.125rem; }
+
+.custom-radio .custom-control-label::before {
+  border-radius: 50%; }
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #0067b8; }
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label .custom-control-glyph::before {
+  content: "";
+  border-width: 0.3125rem;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: #0067b8;
+  height: 0.625rem;
+  width: 0.625rem;
+  font-size: 0.875rem;
+  top: 0.4375rem;
+  color: #0067b8; }
+  .theme-dark .custom-radio .custom-control-input:checked ~ .custom-control-label .custom-control-glyph::before {
+    color: #3aa0fa;
+    border-color: #3aa0fa; }
+  html:not([dir="rtl"]) .custom-radio .custom-control-input:checked ~ .custom-control-label .custom-control-glyph::before {
+    left: -1.4375rem; }
+  html[dir="rtl"] .custom-radio .custom-control-input:checked ~ .custom-control-label .custom-control-glyph::before {
+    right: -1.4375rem; }
+
+.custom-radio .custom-control-input.disabled:checked ~ .custom-control-label::before, .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  border-color: #000; }
+  .theme-dark .custom-radio .custom-control-input.disabled:checked ~ .custom-control-label::before, .theme-dark .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    border-color: #fff; }
+
+.custom-radio .custom-control-input.disabled:checked ~ .custom-control-label .custom-control-glyph::before, .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label .custom-control-glyph::before {
+  opacity: 0.76364;
+  border-color: #000; }
+  .theme-dark .custom-radio .custom-control-input.disabled:checked ~ .custom-control-label .custom-control-glyph::before, .theme-dark .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label .custom-control-glyph::before {
+    border-color: #fff; }
+
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+  outline: 0.1875rem dotted currentColor;
+  outline-offset: 0.125rem; }

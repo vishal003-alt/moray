@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 0.0625rem solid #d2d2d2;
+  border-radius: 0.125rem;
+  max-width: 100%;
+  height: auto; }
+
+.img-object-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100%; }
+
+.figure {
+  display: inline-block; }
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1; }
+
+.figure-caption {
+  font-size: 90%;
+  color: #505050; }
+
+.img-object-contain {
+  object-fit: contain; }

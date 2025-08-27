@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+ul.full li,
+ol.full li {
+  margin-bottom: 1rem; }
+
+.list-unstyled {
+  padding: 0;
+  list-style: none; }
+
+.list-inline {
+  padding: 0;
+  list-style: none; }
+
+.list-inline-item {
+  display: inline-block; }
+  html:not([dir="rtl"]) .list-inline-item:not(:last-child) {
+    margin-right: 1rem; }
+  html[dir="rtl"] .list-inline-item:not(:last-child) {
+    margin-left: 1rem; }

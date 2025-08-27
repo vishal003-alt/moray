@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.cta .glyph::before, .cta-reverse .glyph::before {
+  font-family: "MWF-FLUENT-ICONS";
+  position: absolute;
+  line-height: 1;
+  top: calc(50% + 0.0625em);
+  margin-top: -0.5em;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+  @media (prefers-reduced-motion: reduce) {
+    .cta .glyph::before, .cta-reverse .glyph::before {
+      transition: none; } }
+
+.cta {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600; }
+  html:not([dir="rtl"]) .cta {
+    padding-right: 1.6875em; }
+  html[dir="rtl"] .cta {
+    padding-left: 1.6875em; }
+  .cta .glyph::before {
+    font-weight: 600; }
+    html:not([dir="rtl"]) .cta .glyph::before {
+      content: "";
+      right: 0.4375em; }
+    html[dir="rtl"] .cta .glyph::before {
+      content: "";
+      left: 0.4375em; }
+  .cta:hover {
+    text-decoration: underline; }
+    html:not([dir="rtl"]) .cta:hover .glyph::before {
+      transform: translate(0.25em, 0); }
+    html[dir="rtl"] .cta:hover .glyph::before {
+      transform: translate(-0.25em, 0); }
+
+html:not([dir="rtl"]) .cta-reverse {
+  padding-left: 1.6875em; }
+
+html[dir="rtl"] .cta-reverse {
+  padding-right: 1.6875em; }
+
+.cta-reverse .glyph::before {
+  font-weight: 600; }
+  html:not([dir="rtl"]) .cta-reverse .glyph::before {
+    content: "";
+    left: 0.4375em; }
+  html[dir="rtl"] .cta-reverse .glyph::before {
+    content: "";
+    right: 0.4375em; }
+
+html:not([dir="rtl"]) .cta-reverse:hover .glyph::before {
+  transform: translate(-0.25em, 0); }
+
+html[dir="rtl"] .cta-reverse:hover .glyph::before {
+  transform: translate(0.25em, 0); }

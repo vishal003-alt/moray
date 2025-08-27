@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.combobox {
+  position: relative;
+  display: inline-block;
+  width: 100%; }
+  .combobox .combobox-toggle::after {
+    display: block;
+    font-size: 1em;
+    font-family: "MWF-FLUENT-ICONS";
+    position: absolute;
+    line-height: 1;
+    top: calc(50% + 0.0625em);
+    margin-top: -0.5em; }
+  .combobox .combobox-divider {
+    height: 0;
+    margin: 0 0;
+    overflow: hidden;
+    border-top: 1px solid currentColor;
+    opacity: 0.15; }
+  .combobox .combobox-item {
+    display: block;
+    width: 100%;
+    clear: both;
+    text-decoration: none;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem 0.75rem;
+    color: #000; }
+    .theme-dark .combobox .combobox-item {
+      color: #fff; }
+    .combobox .combobox-item:hover, .combobox .combobox-item:focus {
+      background-color: #e6e6e6;
+      color: #000;
+      outline-offset: -0.1875rem; }
+      .theme-dark .combobox .combobox-item:hover, .theme-dark .combobox .combobox-item:focus {
+        background-color: #505050;
+        color: #fff; }
+    .combobox .combobox-item.active, .combobox .combobox-item:active {
+      background-color: #000;
+      color: #fff; }
+      .theme-dark .combobox .combobox-item.active, .theme-dark .combobox .combobox-item:active {
+        background-color: #fff;
+        color: #000; }
+    .combobox .combobox-item.disabled, .combobox .combobox-item:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+      background-color: transparent; }
+    .combobox .combobox-item:disabled {
+      opacity: 0.3; }
+  html:not([dir="rtl"]) .combobox {
+    text-align: left; }
+  html[dir="rtl"] .combobox {
+    text-align: right; }
+  .combobox .combobox-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .combobox .combobox-toggle .glyph::before {
+      content: ""; }
+  .combobox .combobox-menu {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    font-size: 1rem;
+    border: 0.0625rem solid #757575;
+    border-radius: 0;
+    box-shadow: 0 0.375rem 0.875rem 0 rgba(0, 0, 0, 0.13), 0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.11);
+    background-clip: padding-box;
+    background-color: #fff;
+    color: #000;
+    top: 100%;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto; }
+    .theme-dark .combobox .combobox-menu {
+      border-color: #d2d2d2;
+      background-color: #000;
+      color: #fff; }
+    html:not([dir="rtl"]) .combobox .combobox-menu {
+      text-align: left;
+      left: 0;
+      right: auto; }
+    html[dir="rtl"] .combobox .combobox-menu {
+      text-align: right;
+      left: auto;
+      right: 0; }
+    .combobox .combobox-menu.show {
+      display: block; }
+  .combobox .combobox-item {
+    position: relative;
+    cursor: pointer; }
+    .combobox .combobox-item .glyph {
+      position: absolute; }
+      html:not([dir="rtl"]) .combobox .combobox-item .glyph {
+        left: 1rem; }
+      html[dir="rtl"] .combobox .combobox-item .glyph {
+        right: 1rem; }
+    html:not([dir="rtl"]) .combobox .combobox-item {
+      padding-left: 2.5rem; }
+    html[dir="rtl"] .combobox .combobox-item {
+      padding-right: 2.5rem; }
+    html:not([dir="rtl"]) .combobox .combobox-item:not([role="option"]) {
+      padding-left: 1rem; }
+    html[dir="rtl"] .combobox .combobox-item:not([role="option"]) {
+      padding-right: 1rem; }
+    .combobox .combobox-item:not([role="option"]):hover {
+      background-color: inherit;
+      color: inherit; }
+  .combobox .combobox-divider {
+    border-color: #757575;
+    opacity: 1; }
+    .theme-dark .combobox .combobox-divider {
+      border-color: #d2d2d2; }
+  .combobox .combobox-item.current-item {
+    background-color: #e6e6e6;
+    outline: 0.1875rem dotted currentColor;
+    outline-offset: -3px; }
+    .theme-dark .combobox .combobox-item.current-item {
+      background-color: #505050;
+      color: #fff; }
+    .combobox .combobox-item.current-item:active {
+      background-color: #000;
+      color: #fff; }
+      .theme-dark .combobox .combobox-item.current-item:active {
+        background-color: #fff;
+        color: #000; }
+  .combobox .combobox-item[aria-selected="true"] {
+    background-color: #e6e6e6; }
+    .theme-dark .combobox .combobox-item[aria-selected="true"] {
+      background-color: #505050;
+      color: #fff; }
+    .combobox .combobox-item[aria-selected="true"] .glyph::before {
+      position: relative;
+      top: 0.1875rem;
+      content: ""; }

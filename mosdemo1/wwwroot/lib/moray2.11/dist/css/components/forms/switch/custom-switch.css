@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.custom-switch {
+  display: flex;
+  flex-wrap: wrap; }
+  .custom-switch .custom-switch-input {
+    vertical-align: top;
+    background-color: transparent;
+    border: 0.063rem solid #000;
+    border-radius: 3.125rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline-offset: 0.125rem;
+    outline-color: #000;
+    cursor: pointer; }
+    .theme-dark .custom-switch .custom-switch-input {
+      border: 0.063rem solid #fff;
+      outline-color: #fff; }
+    .custom-switch .custom-switch-input::before {
+      content: "";
+      display: block;
+      position: relative;
+      top: 0.125rem;
+      border-radius: 50%;
+      transition: all 0.25s ease;
+      background-color: #000; }
+      @media (prefers-reduced-motion: reduce) {
+        .custom-switch .custom-switch-input::before {
+          transition: none; } }
+      .theme-dark .custom-switch .custom-switch-input::before {
+        background-color: #fff; }
+      @media (forced-colors: active) {
+        .custom-switch .custom-switch-input::before {
+          background-color: CanvasText !important; } }
+      html:not([dir="rtl"]) .custom-switch .custom-switch-input::before {
+        left: 0.125rem; }
+      html[dir="rtl"] .custom-switch .custom-switch-input::before {
+        left: -0.125rem; }
+    .custom-switch .custom-switch-input:disabled {
+      pointer-events: none;
+      opacity: 0.25; }
+      .custom-switch .custom-switch-input:disabled ~ .custom-switch-label-container > .custom-switch-label,
+      .custom-switch .custom-switch-input:disabled ~ .custom-switch-label,
+      .custom-switch .custom-switch-input:disabled ~ .custom-switch-status {
+        opacity: 0.25;
+        pointer-events: none; }
+    .custom-switch .custom-switch-input[readonly] {
+      border-color: #858585;
+      pointer-events: none; }
+      .custom-switch .custom-switch-input[readonly] ~ .custom-switch-label-container > .custom-switch-label,
+      .custom-switch .custom-switch-input[readonly] ~ .custom-switch-label,
+      .custom-switch .custom-switch-input[readonly] ~ .custom-switch-status {
+        pointer-events: none; }
+      .custom-switch .custom-switch-input[readonly]::before {
+        background-color: #858585; }
+    .custom-switch .custom-switch-input:not(:checked):not(:disabled):not([readonly]):hover {
+      background-color: rgba(0, 0, 0, 0.2); }
+      .theme-dark .custom-switch .custom-switch-input:not(:checked):not(:disabled):not([readonly]):hover {
+        background-color: rgba(255, 255, 255, 0.2); }
+    .custom-switch .custom-switch-input:checked {
+      background-color: #0067b8;
+      border-color: #0067b8; }
+      .theme-dark .custom-switch .custom-switch-input:checked {
+        background-color: #3aa0fa;
+        border-color: #3aa0fa; }
+      .custom-switch .custom-switch-input:checked::before {
+        transition: all 0.25s ease;
+        background-color: #fff; }
+        .theme-dark .custom-switch .custom-switch-input:checked::before {
+          background-color: #000; }
+      .custom-switch .custom-switch-input:checked:not(:disabled):not([readonly]):hover {
+        background-color: #004a85;
+        border-color: #004a85; }
+        .theme-dark .custom-switch .custom-switch-input:checked:not(:disabled):not([readonly]):hover {
+          background-color: #0888f9;
+          border-color: #0888f9; }
+      .custom-switch .custom-switch-input:checked[readonly] {
+        background-color: #858585;
+        border-color: #858585; }
+      .custom-switch .custom-switch-input:checked ~ .custom-switch-status > .custom-switch-status-on {
+        display: block; }
+      .custom-switch .custom-switch-input:checked ~ .custom-switch-status > .custom-switch-status-off {
+        display: none; }
+    .custom-switch .custom-switch-input:hover {
+      cursor: pointer; }
+  .custom-switch .custom-switch-label {
+    order: -1;
+    cursor: pointer; }
+    html:not([dir="rtl"]) .custom-switch .custom-switch-label {
+      padding-right: 0.5rem; }
+    html[dir="rtl"] .custom-switch .custom-switch-label {
+      padding-left: 0.5rem; }
+  .custom-switch .custom-switch-status [class*="custom-switch-status-"] {
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none; }
+    html:not([dir="rtl"]) .custom-switch .custom-switch-status [class*="custom-switch-status-"] {
+      padding-left: 0.5rem; }
+    html[dir="rtl"] .custom-switch .custom-switch-status [class*="custom-switch-status-"] {
+      padding-right: 0.5rem; }
+  .custom-switch .custom-switch-status .custom-switch-status-on {
+    display: none; }
+  .custom-switch .custom-switch-input {
+    width: 3rem;
+    height: 1.5rem; }
+    .custom-switch .custom-switch-input::before {
+      width: 1.125rem;
+      height: 1.125rem; }
+    .custom-switch .custom-switch-input:checked::before {
+      transform: translateX(1.5rem); }
+      html[dir="rtl"] .custom-switch .custom-switch-input:checked::before {
+        transform: translateX(-1.5rem); }
+  .custom-switch .custom-switch-label,
+  .custom-switch .custom-switch-status {
+    font-size: 1rem; }
+  .custom-switch.custom-switch-lg .custom-switch-input {
+    width: 3.5rem;
+    height: 1.75rem; }
+    .custom-switch.custom-switch-lg .custom-switch-input::before {
+      width: 1.375rem;
+      height: 1.375rem; }
+    .custom-switch.custom-switch-lg .custom-switch-input:checked::before {
+      transform: translateX(1.75rem); }
+      html[dir="rtl"] .custom-switch.custom-switch-lg .custom-switch-input:checked::before {
+        transform: translateX(-1.75rem); }
+  .custom-switch.custom-switch-lg .custom-switch-label,
+  .custom-switch.custom-switch-lg .custom-switch-status {
+    font-size: 1.125rem; }
+  .custom-switch.custom-switch-label-top .custom-switch-label-container {
+    flex-basis: 100%;
+    order: -1; }
+    .custom-switch.custom-switch-label-top .custom-switch-label-container .custom-switch-label {
+      margin: 0;
+      order: unset;
+      line-height: 1rem;
+      padding-bottom: 0.5rem; }
+      html:not([dir="rtl"]) .custom-switch.custom-switch-label-top .custom-switch-label-container .custom-switch-label {
+        padding-right: 0; }
+      html[dir="rtl"] .custom-switch.custom-switch-label-top .custom-switch-label-container .custom-switch-label {
+        padding-left: 0; }

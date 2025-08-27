@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.tab-group [tabindex]:focus,
+.tab-arrows [tabindex]:focus {
+  /* stylelint-disable-next-line declaration-no-important */
+  outline: 0.1875rem dotted currentColor !important;
+  z-index: 2; }
+
+.tab-content,
+.tab-panel-group {
+  margin-top: 3rem; }
+  .tab-content > .tab-pane,
+  .tab-content > .tab-panel,
+  .tab-panel-group > .tab-pane,
+  .tab-panel-group > .tab-panel {
+    display: none; }
+    .tab-content > .tab-pane:focus,
+    .tab-content > .tab-panel:focus,
+    .tab-panel-group > .tab-pane:focus,
+    .tab-panel-group > .tab-panel:focus {
+      outline: 0.1875rem dotted currentColor; }
+    .tab-content > .tab-pane:focus:not(:focus-visible),
+    .tab-content > .tab-panel:focus:not(:focus-visible),
+    .tab-panel-group > .tab-pane:focus:not(:focus-visible),
+    .tab-panel-group > .tab-panel:focus:not(:focus-visible) {
+      outline: 0; }
+    .tab-content > .tab-pane:focus-visible,
+    .tab-content > .tab-panel:focus-visible,
+    .tab-panel-group > .tab-pane:focus-visible,
+    .tab-panel-group > .tab-panel:focus-visible {
+      outline: 0.1875rem dotted currentColor; }
+  .tab-content > .active,
+  .tab-panel-group > .active {
+    display: block; }
+
+.tab-overflow {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none; }
+  .tab-overflow::-webkit-scrollbar {
+    display: none; }
+
+.tab-group {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 0; }
+  .tab-standard .tab-group {
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-color: #505050; }
+    .theme-dark .tab-standard .tab-group {
+      border-color: #e6e6e6; }
+  .tab-underline .tab-group {
+    border-bottom: 0.0625rem solid #858585; }
+    .theme-dark .tab-underline .tab-group {
+      border-bottom: 0.0625rem solid #757575; }
+  .tab-group a,
+  .tab-group button {
+    flex: 0 0 auto; }
+  .tab-group a:not(.tab-image),
+  .tab-group button:not(.tab-image) {
+    color: #505050;
+    border-style: solid;
+    border-width: 0.125rem;
+    font-weight: 600;
+    text-decoration: none; }
+    .theme-dark .tab-group a:not(.tab-image), .theme-dark
+    .tab-group button:not(.tab-image) {
+      color: #e6e6e6; }
+    .tab-standard .tab-group a:not(.tab-image), .tab-standard
+    .tab-group button:not(.tab-image) {
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      border-bottom: none;
+      padding: 0.5rem 0.75rem; }
+      html:not([dir="rtl"]) .tab-standard .tab-group a:not(.tab-image):not(:first-child), html:not([dir="rtl"]) .tab-standard
+      .tab-group button:not(.tab-image):not(:first-child) {
+        margin-left: -0.125rem; }
+      html[dir="rtl"] .tab-standard .tab-group a:not(.tab-image):not(:last-child), html[dir="rtl"] .tab-standard
+      .tab-group button:not(.tab-image):not(:last-child) {
+        margin-left: -0.125rem; }
+    .tab-underline .tab-group a:not(.tab-image), .tab-underline
+    .tab-group button:not(.tab-image) {
+      border: transparent;
+      border-bottom: 0.0625rem transparent solid;
+      border-radius: 0.375rem 0.375rem 0 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 0.75rem;
+      margin: 0 0.0625rem; }
+      .tab-underline .tab-group a:not(.tab-image) span, .tab-underline
+      .tab-group button:not(.tab-image) span {
+        max-width: 12rem; }
+    .tab-outline .tab-group a:not(.tab-image), .tab-outline
+    .tab-group button:not(.tab-image) {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.625rem; }
+      .tab-outline .tab-group a:not(.tab-image)::after, .tab-outline
+      .tab-group button:not(.tab-image)::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 0.125rem * 2);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        background: #e6e6e6; }
+        .theme-dark .tab-outline .tab-group a:not(.tab-image)::after, .theme-dark .tab-outline
+        .tab-group button:not(.tab-image)::after {
+          background: #505050; }
+        html:not([dir="rtl"]) .tab-outline .tab-group a:not(.tab-image)::after, html:not([dir="rtl"]) .tab-outline
+        .tab-group button:not(.tab-image)::after {
+          right: calc((0.625rem / 2 + 0.35rem) * -1); }
+        html[dir="rtl"] .tab-outline .tab-group a:not(.tab-image)::after, html[dir="rtl"] .tab-outline
+        .tab-group button:not(.tab-image)::after {
+          left: calc((0.625rem / 2 + 0.35rem) * -1); }
+      .tab-outline .tab-group a:not(.tab-image):last-child::after, .tab-outline
+      .tab-group button:not(.tab-image):last-child::after {
+        content: none; }
+    .tab-group a:not(.tab-image):not(.active),
+    .tab-group button:not(.tab-image):not(.active) {
+      transition: all 125ms ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .tab-group a:not(.tab-image):not(.active),
+        .tab-group button:not(.tab-image):not(.active) {
+          transition: none; } }
+      .tab-standard .tab-group a:not(.tab-image):not(.active), .tab-standard
+      .tab-group button:not(.tab-image):not(.active) {
+        background: #f2f2f2;
+        border-color: #d2d2d2;
+        margin-top: 0.25rem; }
+        .theme-dark .tab-standard .tab-group a:not(.tab-image):not(.active), .theme-dark .tab-standard
+        .tab-group button:not(.tab-image):not(.active) {
+          background: rgba(242, 242, 242, 0.15);
+          border-color: #757575; }
+      .tab-underline .tab-group a:not(.tab-image):not(.active), .tab-underline
+      .tab-group button:not(.tab-image):not(.active) {
+        color: #505050; }
+        .theme-dark .tab-underline .tab-group a:not(.tab-image):not(.active), .theme-dark .tab-underline
+        .tab-group button:not(.tab-image):not(.active) {
+          color: #a2a2a2; }
+      .tab-outline .tab-group a:not(.tab-image):not(.active), .tab-outline
+      .tab-group button:not(.tab-image):not(.active) {
+        background: #e6e6e6;
+        border-color: #e6e6e6; }
+        .theme-dark .tab-outline .tab-group a:not(.tab-image):not(.active), .theme-dark .tab-outline
+        .tab-group button:not(.tab-image):not(.active) {
+          background: #505050;
+          border-color: #505050; }
+      .tab-group a:not(.tab-image):not(.active):hover, .tab-group a:not(.tab-image):not(.active):focus,
+      .tab-group button:not(.tab-image):not(.active):hover,
+      .tab-group button:not(.tab-image):not(.active):focus {
+        color: #000; }
+        .theme-dark .tab-group a:not(.tab-image):not(.active):hover, .theme-dark .tab-group a:not(.tab-image):not(.active):focus, .theme-dark
+        .tab-group button:not(.tab-image):not(.active):hover, .theme-dark
+        .tab-group button:not(.tab-image):not(.active):focus {
+          color: #fff; }
+        .tab-standard .tab-group a:not(.tab-image):not(.active):hover, .tab-standard .tab-group a:not(.tab-image):not(.active):focus, .tab-standard
+        .tab-group button:not(.tab-image):not(.active):hover, .tab-standard
+        .tab-group button:not(.tab-image):not(.active):focus {
+          margin-top: 0;
+          padding-top: 0.75rem; }
+    .tab-underline .tab-group a:not(.tab-image):hover, .tab-underline .tab-group a:not(.tab-image):focus, .tab-underline
+    .tab-group button:not(.tab-image):hover, .tab-underline
+    .tab-group button:not(.tab-image):focus {
+      background: #e6e6e6;
+      color: #171717; }
+      .theme-dark .tab-underline .tab-group a:not(.tab-image):hover, .theme-dark .tab-underline .tab-group a:not(.tab-image):focus, .theme-dark .tab-underline
+      .tab-group button:not(.tab-image):hover, .theme-dark .tab-underline
+      .tab-group button:not(.tab-image):focus {
+        background: #505050;
+        color: #f2f2f2; }
+    .tab-outline .tab-group a:not(.tab-image):hover, .tab-outline .tab-group a:not(.tab-image):focus, .tab-outline
+    .tab-group button:not(.tab-image):hover, .tab-outline
+    .tab-group button:not(.tab-image):focus {
+      z-index: auto; }
+    .tab-group a:not(.tab-image):focus,
+    .tab-group button:not(.tab-image):focus {
+      outline-offset: -0.375rem; }
+      .tab-underline .tab-group a:not(.tab-image):focus, .tab-underline
+      .tab-group button:not(.tab-image):focus {
+        outline-offset: -0.1875rem; }
+  .tab-outline .tab-group .tab-label {
+    max-width: 12rem;
+    line-height: 1.25; }
+  .tab-outline .tab-group .glyph {
+    line-height: 1;
+    padding-top: 0.125rem; }
+  .tab-underline .tab-group .glyph {
+    line-height: 1; }
+  .tab-group .glyph::before {
+    vertical-align: text-bottom; }
+  .tab-group .active:not(.tab-image) {
+    border-color: #505050;
+    color: #000;
+    z-index: 1; }
+    .theme-dark .tab-group .active:not(.tab-image) {
+      border-color: #e6e6e6;
+      color: #fff; }
+    .tab-standard .tab-group .active:not(.tab-image) {
+      background: #fff;
+      padding-top: 0.75rem;
+      margin-bottom: -0.125rem; }
+      .theme-dark .tab-standard .tab-group .active:not(.tab-image) {
+        background: #000; }
+    .tab-underline .tab-group .active:not(.tab-image) {
+      color: #171717; }
+      .theme-dark .tab-underline .tab-group .active:not(.tab-image) {
+        color: #f2f2f2; }
+      .tab-underline .tab-group .active:not(.tab-image)::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.25rem;
+        bottom: -0.125rem;
+        left: 0;
+        right: 0;
+        border-radius: 0.125rem 0.125rem 0 0;
+        background: #0067b8; }
+        .theme-dark .tab-underline .tab-group .active:not(.tab-image)::after {
+          background: #3aa0fa; }
+    .tab-outline .tab-group .active:not(.tab-image) {
+      padding: 0.25rem 0.75rem;
+      z-index: auto;
+      background-color: #fff;
+      border-color: #0067b8; }
+      .theme-dark .tab-outline .tab-group .active:not(.tab-image) {
+        background-color: #000;
+        border-color: #3aa0fa; }
+    @media screen and (-ms-high-contrast: black-on-white) {
+      .tab-group .active:not(.tab-image) {
+        background: #000;
+        border-color: #fff;
+        color: #fff; } }
+    @media screen and (-ms-high-contrast: white-on-black) {
+      .tab-group .active:not(.tab-image) {
+        background: #fff;
+        border-color: #000;
+        color: #000; } }
+  .sticky.stuck .tab-group a:active, .sticky.stuck .tab-group a:focus,
+  .sticky.stuck .tab-group button:active,
+  .sticky.stuck .tab-group button:focus {
+    margin-bottom: 0; }
+
+.tab-primary .tab-group {
+  border-color: #0067b8; }
+  .theme-dark .tab-primary .tab-group {
+    border-color: #3aa0fa; }
+  .tab-primary .tab-group a:not(.tab-image),
+  .tab-primary .tab-group button:not(.tab-image) {
+    color: #0067b8; }
+    .theme-dark .tab-primary .tab-group a:not(.tab-image), .theme-dark
+    .tab-primary .tab-group button:not(.tab-image) {
+      color: #3aa0fa; }
+    .tab-primary .tab-group a:not(.tab-image):not(.active),
+    .tab-primary .tab-group button:not(.tab-image):not(.active) {
+      border-color: rgba(0, 103, 184, 0.1);
+      background: rgba(0, 103, 184, 0.1); }
+      .theme-dark .tab-primary .tab-group a:not(.tab-image):not(.active), .theme-dark
+      .tab-primary .tab-group button:not(.tab-image):not(.active) {
+        border-color: rgba(0, 103, 184, 0.1);
+        background: rgba(0, 103, 184, 0.3); }
+  .tab-primary .tab-group .active {
+    border-color: #0067b8; }
+    .theme-dark .tab-primary .tab-group .active {
+      border-color: #3aa0fa; }
+
+.tab-arrows {
+  display: none; }
+  .tab-arrows .arrow-prev,
+  .tab-arrows .arrow-next {
+    color: #000;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    padding: 0 0.65rem;
+    border: none;
+    transition: all 125ms ease-in-out;
+    z-index: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      .tab-arrows .arrow-prev,
+      .tab-arrows .arrow-next {
+        transition: none; } }
+    .theme-dark .tab-arrows .arrow-prev, .theme-dark
+    .tab-arrows .arrow-next {
+      color: #fff; }
+    .tab-standard .tab-arrows .arrow-prev, .tab-standard
+    .tab-arrows .arrow-next {
+      height: calc(100% - 0.125rem);
+      padding: 0.75rem 0.65rem 0.5rem 0.65rem; }
+    .tab-arrows .arrow-prev::after,
+    .tab-arrows .arrow-next::after {
+      font-family: "MWF-FLUENT-ICONS";
+      font-size: 1.25rem;
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      color: inherit; }
+      @media (prefers-reduced-motion: reduce) {
+        .tab-arrows .arrow-prev::after,
+        .tab-arrows .arrow-next::after {
+          transition: none; } }
+  .tab-arrows .arrow-prev {
+    left: 0.75rem;
+    background: linear-gradient(to right, #fff 75%, rgba(255, 255, 255, 0)); }
+    .theme-dark .tab-arrows .arrow-prev {
+      background: linear-gradient(to right, #000 75%, rgba(0, 0, 0, 0)); }
+    .tab-arrows .arrow-prev::after {
+      content: ""; }
+    .tab-arrows .arrow-prev:hover, .tab-arrows .arrow-prev:focus {
+      transform: translate(-0.25rem, 0); }
+  .tab-arrows .arrow-next {
+    background: linear-gradient(to left, #fff 75%, rgba(255, 255, 255, 0));
+    right: 0.75rem; }
+    .theme-dark .tab-arrows .arrow-next {
+      background: linear-gradient(to left, #000 75%, rgba(0, 0, 0, 0)); }
+    .tab-arrows .arrow-next::after {
+      content: ""; }
+    .tab-arrows .arrow-next:hover, .tab-arrows .arrow-next:focus {
+      transform: translate(0.25rem, 0); }
+  .tab-arrows.mobile-arrows .arrow-prev {
+    background: linear-gradient(to right, #fff 5%, rgba(255, 255, 255, 0)); }
+    .theme-dark .tab-arrows.mobile-arrows .arrow-prev {
+      background: linear-gradient(to right, #000 5%, rgba(0, 0, 0, 0)); }
+  .tab-arrows.mobile-arrows .arrow-next {
+    background: linear-gradient(to left, #fff 5%, rgba(255, 255, 255, 0)); }
+    .theme-dark .tab-arrows.mobile-arrows .arrow-next {
+      background: linear-gradient(to left, #000 5%, rgba(0, 0, 0, 0)); }
+  .tab-arrows.mobile-arrows .arrow-prev,
+  .tab-arrows.mobile-arrows .arrow-next {
+    pointer-events: none; }
+    .tab-arrows.mobile-arrows .arrow-prev::after,
+    .tab-arrows.mobile-arrows .arrow-next::after {
+      color: transparent; }
+
+.tab-arrows-lg .arrow-prev,
+.tab-arrows-lg .arrow-next {
+  padding: 0.5rem; }
+  .tab-arrows-lg .arrow-prev::after,
+  .tab-arrows-lg .arrow-next::after {
+    font-size: 1.5rem; }

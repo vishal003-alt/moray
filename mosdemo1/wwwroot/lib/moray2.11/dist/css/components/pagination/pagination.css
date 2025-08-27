@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.pagination {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+  margin-bottom: 0;
+  border-color: #0067b8; }
+  .theme-dark .pagination {
+    border-color: #3aa0fa; }
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.625rem 0.75rem;
+  line-height: 1;
+  text-decoration: none;
+  border: 0.125rem solid transparent; }
+
+.page-item {
+  white-space: nowrap;
+  border-color: inherit; }
+  .page-item:first-child, .page-item:last-child {
+    display: inline-block; }
+    .page-item:first-child .page-link::before, .page-item:first-child .page-link::after, .page-item:last-child .page-link::before, .page-item:last-child .page-link::after {
+      font-family: "MWF-FLUENT-ICONS";
+      display: inline-block;
+      font-size: 1rem;
+      position: absolute;
+      top: calc(50% + 0.0625em);
+      margin-top: -0.5em;
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+      @media (prefers-reduced-motion: reduce) {
+        .page-item:first-child .page-link::before, .page-item:first-child .page-link::after, .page-item:last-child .page-link::before, .page-item:last-child .page-link::after {
+          transition: none; } }
+    .page-item:first-child .page-link:hover, .page-item:last-child .page-link:hover {
+      text-decoration: underline; }
+  html:not([dir="rtl"]) .page-item:first-child .page-link {
+    padding-left: 1.4375em; }
+  html[dir="rtl"] .page-item:first-child .page-link {
+    padding-right: 1.4375em; }
+  html:not([dir="rtl"]) .page-item:first-child .page-link::before {
+    content: "";
+    left: 0; }
+  html[dir="rtl"] .page-item:first-child .page-link::before {
+    content: "";
+    right: 0; }
+  html:not([dir="rtl"]) .page-item:first-child .page-link:hover::before {
+    transform: translate(-0.25em, 0); }
+  html[dir="rtl"] .page-item:first-child .page-link:hover::before {
+    transform: translate(0.25em, 0); }
+  html:not([dir="rtl"]) .page-item:last-child .page-link {
+    padding-right: 1.4375em; }
+  html[dir="rtl"] .page-item:last-child .page-link {
+    padding-left: 1.4375em; }
+  html:not([dir="rtl"]) .page-item:last-child .page-link::after {
+    content: "";
+    right: 0; }
+  html[dir="rtl"] .page-item:last-child .page-link::after {
+    content: "";
+    left: 0; }
+  html:not([dir="rtl"]) .page-item:last-child .page-link:hover::after {
+    transform: translate(0.25em, 0); }
+  html[dir="rtl"] .page-item:last-child .page-link:hover::after {
+    transform: translate(-0.25em, 0); }
+  .page-item.active {
+    display: inline-block;
+    position: relative; }
+    .page-item.active::after {
+      content: "";
+      display: block;
+      width: 1.5em;
+      border-top-width: 2px;
+      border-top-style: solid;
+      border-color: inherit;
+      margin: -0.375rem auto; }
+    .page-item.active .page-link {
+      color: inherit;
+      cursor: default; }
+  .page-item.disabled .page-link {
+    color: #757575;
+    pointer-events: none; }
+    .theme-dark .page-item.disabled .page-link {
+      color: #d2d2d2; }
+
+@media screen and (min-width: 860px) {
+  .pagination-segment-start.pagination-edge .ellipsis {
+    display: none; } }
+
+@media screen and (min-width: 540px) and (max-width: 860px) {
+  .pagination-segment-start .page-item:nth-child(5), .pagination-segment-start .page-item:nth-child(6), .pagination-segment-start .page-item:nth-last-child(3):not(.ellipsis) {
+    display: none; }
+  .pagination-segment-end .page-item:nth-last-child(5), .pagination-segment-end .page-item:nth-last-child(6) {
+    display: none; }
+  .pagination-segment-middle .page-item.ellipsis-before, .pagination-segment-middle .page-item.ellipsis-after {
+    display: none; } }
+
+@media screen and (max-width: 540px) {
+  .page-item:not(.active):not(:first-child):not(:last-child) {
+    display: none; } }

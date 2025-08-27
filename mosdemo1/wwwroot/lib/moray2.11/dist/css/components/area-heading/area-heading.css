@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+.area-heading > :last-child > :last-child {
+  margin-bottom: 0; }
+  .area-heading > :last-child > :last-child h1,
+  .area-heading > :last-child > :last-child .h1,
+  .area-heading > :last-child > :last-child h2,
+  .area-heading > :last-child > :last-child .h2,
+  .area-heading > :last-child > :last-child h3,
+  .area-heading > :last-child > :last-child .h3,
+  .area-heading > :last-child > :last-child h4,
+  .area-heading > :last-child > :last-child .h4,
+  .area-heading > :last-child > :last-child h5,
+  .area-heading > :last-child > :last-child .h5,
+  .area-heading > :last-child > :last-child h6,
+  .area-heading > :last-child > :last-child .h6,
+  .area-heading > :last-child > :last-child p,
+  .area-heading > :last-child > :last-child .link-group {
+    margin-bottom: 0; }

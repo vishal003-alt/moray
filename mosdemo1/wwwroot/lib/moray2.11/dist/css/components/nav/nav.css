@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.nav-container {
+  overflow-x: hidden;
+  padding: 4px; }
+  .nav-container .nav {
+    margin-left: -1rem;
+    margin-right: -1rem; }
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none; }
+  .nav .nav-item {
+    margin: 0 1rem; }
+
+.nav-link,
+.nav-item {
+  position: relative; }
+  .nav-link::before,
+  .nav-item::before {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0.25rem;
+    width: 100%;
+    height: 0.125rem;
+    padding: 0 0;
+    background-color: #0067b8;
+    background-clip: content-box; }
+    html:not([dir="rtl"]) .nav-link::before, html:not([dir="rtl"])
+    .nav-item::before {
+      left: 0; }
+    html[dir="rtl"] .nav-link::before, html[dir="rtl"]
+    .nav-item::before {
+      right: 0; }
+
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 0;
+  color: #0067b8;
+  font-weight: 600;
+  text-decoration: none; }
+  .nav-link:hover::before {
+    display: block; }
+  .nav-link.disabled {
+    color: #757575;
+    pointer-events: none;
+    cursor: default; }
+  .nav-link.active {
+    color: #000; }
+    .nav-link.active::before {
+      display: none; }
+  .nav-link.dropdown-toggle {
+    display: inline-flex;
+    gap: 0.5em; }
+    .nav-link.dropdown-toggle .glyph {
+      position: relative; }
+    .nav-link.dropdown-toggle::before {
+      width: calc(100% - 1.875em); }
+    html:not([dir="rtl"]) .nav-link.dropdown-toggle::after {
+      right: 0; }
+    html[dir="rtl"] .nav-link.dropdown-toggle::after {
+      left: 0; }
+  .nav-link .glyph::before {
+    position: relative;
+    top: 0.125em; }
+    html:not([dir="rtl"]) .nav-link .glyph::before {
+      padding-right: 0.375em; }
+    html[dir="rtl"] .nav-link .glyph::before {
+      padding-left: 0.375em; }
+
+.nav-item.active {
+  color: inherit; }
+  .nav-item.active .nav-link {
+    color: inherit; }
+  .nav-item.active::before {
+    display: block; }
+
+html:not([dir="rtl"]) .nav-item .dropdown-menu {
+  left: 0.5rem; }
+
+html[dir="rtl"] .nav-item .dropdown-menu {
+  right: 0.5rem; }

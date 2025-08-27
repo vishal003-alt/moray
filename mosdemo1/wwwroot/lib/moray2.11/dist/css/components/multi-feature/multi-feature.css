@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.multi-feature {
+  position: relative;
+  width: 100%; }
+  @media screen and (min-width: 1084px) {
+    .multi-feature .accordion {
+      position: static;
+      width: 33.33333%; }
+      html:not([dir="rtl"]) .multi-feature .accordion {
+        padding-right: 0.75rem; }
+      html[dir="rtl"] .multi-feature .accordion {
+        padding-left: 0.75rem; } }
+
+@media screen and (min-width: 1084px) {
+  .multi-feature-body > :last-child:not(.link-group) {
+    margin-bottom: 0 !important; } }
+
+@media screen and (min-width: 1084px) {
+  .multi-feature-feature {
+    position: absolute;
+    width: 66.66667%;
+    top: 0; }
+    html:not([dir="rtl"]) .multi-feature-feature {
+      padding-left: 0.75rem;
+      right: 0; }
+    html[dir="rtl"] .multi-feature-feature {
+      padding-right: 0.75rem;
+      left: 0; } }

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.badge {
+  display: inline-block;
+  padding: 0.375em 0.75em;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: top;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word; }
+  .badge:empty {
+    display: none; }
+  .badge:focus {
+    outline: 0.1875rem dotted currentColor;
+    outline-offset: -0.375rem; }

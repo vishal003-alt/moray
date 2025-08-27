@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.spinner {
+  position: relative;
+  width: 2.375rem;
+  height: 2.375rem;
+  padding: 0.35625rem; }
+
+.spinner .spinner-dot {
+  position: absolute;
+  transform: rotate(225deg);
+  animation: orbit 5.5s infinite;
+  width: 1.6625rem;
+  height: 1.6625rem; }
+
+.spinner .spinner-dot::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border: #0067b8 0.09375rem solid;
+  background: #0067b8; }
+  .theme-dark .spinner .spinner-dot::after {
+    background: #3aa0fa; }
+
+.spinner .spinner-dot.spinner-dot-2 {
+  animation-delay: 240ms; }
+
+.spinner .spinner-dot.spinner-dot-3 {
+  animation-delay: 480ms; }
+
+.spinner .spinner-dot.spinner-dot-4 {
+  animation-delay: 720ms; }
+
+.spinner .spinner-dot.spinner-dot-5 {
+  animation-delay: 960ms; }
+
+.spinner.spinner-lg {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.84375rem; }
+
+.spinner.spinner-lg .spinner-dot {
+  width: 3.99375rem;
+  height: 3.99375rem; }
+
+.spinner.spinner-lg .spinner-dot::after {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-width: 0.1875rem; }
+
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  .spinner-dot,
+  .spinner-dot::after {
+    display: none; }
+  .spinner > .sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: auto;
+    white-space: inherit; } }
+
+@keyframes orbit {
+  0% {
+    transform: rotate(225deg);
+    opacity: 1;
+    animation-timing-function: ease-out; }
+  7% {
+    transform: rotate(345deg);
+    animation-timing-function: linear; }
+  30% {
+    transform: rotate(455deg);
+    animation-timing-function: ease-in-out; }
+  39% {
+    transform: rotate(690deg);
+    animation-timing-function: linear; }
+  70% {
+    transform: rotate(815deg);
+    opacity: 1;
+    animation-timing-function: ease-out; }
+  75% {
+    transform: rotate(945deg);
+    animation-timing-function: ease-out; }
+  76% {
+    transform: rotate(945deg);
+    opacity: 0; }
+  100% {
+    transform: rotate(945deg);
+    opacity: 0; } }

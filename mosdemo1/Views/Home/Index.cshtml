@@ -1,0 +1,165 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+    <!-- Row with dropdown and button -->
+    <div class="row mb-4">
+        <div class="col-6">
+            <label for="timeSelectDropdown">Choose a Time Range</label>
+            <div class="custom-select">
+                <select class="custom-select-input" id="timeSelectDropdown">
+                    <option value="30m" selected>Last 30 min</option>
+                    <option value="24h">24 hours</option>
+                    <option value="3d">Last 3 days</option>
+                    <option value="7d">Last 7 days</option>
+                    <option value="30d">Last 1 month</option>
+                </select>
+                <span class="custom-select-arrow" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="col-2 mt-26px">
+            <button id="fetchInsight" class="btn btn-primary">Fetch</button>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table class="table table-fixed">
+        <thead class="">
+            <tr>
+                <td></td>
+                <th scope="col">Surface Go</th>
+                <th scope="col">Surface Laptop</th>
+                <th scope="col">Surface Laptop 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Processor</th>
+                <td>Intel® Pentium® Gold Processor 4415Y</td>
+                <td>7th Gen Intel® Core™ i5, or i7</td>
+                <td>Intel® Core™ 8th Gen i5 or i7</td>
+            </tr>
+            <tr>
+                <th scope="row">Graphics</th>
+                <td>Intel® HD Graphics 615</td>
+                <td>Intel® HD Graphics 620 (i5)<br>Intel® Iris™ Plus Graphics 640 (i7)</td>
+                <td>Intel® UHD Graphics 620 (i5)<br>Intel® UHD Graphics 620 (i7)</td>
+            </tr>
+            <tr>
+                <th scope="row">Screen</th>
+                <td>10” PixelSense™ Display</td>
+                <td>13.5” PixelSense™ Display</td>
+                <td>13.5” PixelSense™ Display</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav aria-label="Pagination for search results: 20 pages">
+        <label for="rowsPerPageSelect">Rows per page:</label>
+        <select id="rowsPerPageSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="5">5</option>
+        </select>
+        <ul class="pagination pagination-segment-start">
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="Previous Page">Previous</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link" href="#" aria-current="page" aria-label="Page 2"><span>2</span></a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 3"><span>3</span></a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 4"><span>4</span></a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 5"><span>5</span></a>
+            </li>
+            <li class="page-item disabled ellipsis">
+                <span class="page-link text-body">...</span>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 20, last page"><span>20</span></a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="Next Page">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let rows = $("table tbody tr");   // all table rows
+        let rowsPerPage = parseInt($("#rowsPerPageSelect").val()); // user choice
+        let rowsCount = rows.length;
+        let pageCount = Math.ceil(rowsCount / rowsPerPage);
+
+        function buildPagination() {
+            pageCount = Math.ceil(rowsCount / rowsPerPage);
+            let pagination = $(".pagination");
+            pagination.empty();
+            pagination.append('<li class="page-item"><a class="page-link prev" href="#">Previous</a></li>');
+            for (let i = 1; i <= pageCount; i++) {
+                pagination.append('<li class="page-item"><a class="page-link page-num" href="#" data-page="' + i + '">' + i + '</a></li>');
+            }
+            pagination.append('<li class="page-item"><a class="page-link next" href="#">Next</a></li>');
+        }
+
+        function showPage(page) {
+            rows.hide();
+            let start = (page - 1) * rowsPerPage;
+            let end = start + rowsPerPage;
+            rows.slice(start, end).show();
+
+            $(".pagination li").removeClass("active");
+            $('.page-link[data-page="' + page + '"]').parent().addClass("active");
+        }
+
+        // initialize
+        buildPagination();
+        showPage(1);
+
+        // handle click on page number
+        $(document).on("click", ".page-num", function (e) {
+            e.preventDefault();
+            let page = $(this).data("page");
+            showPage(page);
+        });
+
+        // handle prev
+        $(document).on("click", ".prev", function (e) {
+            e.preventDefault();
+            let currentPage = parseInt($(".pagination li.active a").data("page")) || 1;
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+        });
+
+        // handle next
+        $(document).on("click", ".next", function (e) {
+            e.preventDefault();
+            let currentPage = parseInt($(".pagination li.active a").data("page")) || 1;
+            if (currentPage < pageCount) {
+                showPage(currentPage + 1);
+            }
+        });
+
+        // handle rows per page change
+        $("#rowsPerPageSelect").on("change", function () {
+            rowsPerPage = parseInt($(this).val());
+            buildPagination();
+            showPage(1); // reset to first page
+        });
+    });
+</script>

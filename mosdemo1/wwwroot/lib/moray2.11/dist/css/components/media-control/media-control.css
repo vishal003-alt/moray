@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.media-control {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  font-size: 2.8125rem;
+  line-height: 1;
+  box-shadow: 0 0.1875rem 0.4375rem 0 rgba(0, 0, 0, 0.13), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.11);
+  border: 0; }
+  .media-control::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 104%;
+    height: 104%;
+    border: 0.25rem solid #fff;
+    top: -2%;
+    left: -2%; }
+  .media-control:focus {
+    outline: none; }
+    .media-control:focus::after {
+      border-style: dashed;
+      border-width: 0.1875rem;
+      border-color: #000;
+      content: "";
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      border-radius: 50%;
+      width: 102%;
+      height: 102%;
+      top: -1%;
+      left: -1%; }
+  .media-control .glyph-prepend,
+  .media-control .glyph-append,
+  .media-control .glyph {
+    position: absolute;
+    left: 0.1875rem;
+    top: 0.1875rem; }
+  .media-control.media-control-light {
+    background-color: #000;
+    color: #fff; }
+    .media-control.media-control-light::before {
+      border-color: #000; }
+    .media-control.media-control-light:focus::after {
+      border-color: #fff; }
+  @media (forced-colors: active) {
+    .media-control {
+      border-radius: 0; }
+      .media-control::before {
+        content: none; } }
+
+@media (min-width: 540px) {
+  .media-control-lg {
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 4.4375rem; } }

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+hr,
+.divider {
+  border: 0;
+  border-top: 0.0625rem solid #757575;
+  margin: 0; }
+  .theme-dark hr, .theme-dark
+  .divider {
+    border-color: #d2d2d2; }

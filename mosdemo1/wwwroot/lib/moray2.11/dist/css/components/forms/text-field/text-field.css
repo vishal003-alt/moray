@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*!
+ * MWF (Moray) v2.11.0
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Copyright 2011-2022 The Bootstrap Authors and Twitter, Inc.
+ * Copyright ©2022 W3C® (MIT, ERCIM, Keio, Beihang).
+ */
+/* prettier-ignore */
+/* stylelint-disable-line declaration-no-important */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0.125rem solid #505050;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .form-control {
+      transition: none; } }
+  .theme-dark .form-control {
+    color: #fff;
+    background-color: #000;
+    border: 0.125rem solid #e6e6e6; }
+  .form-control:focus {
+    outline: 0.1875rem dotted currentColor;
+    outline-offset: -0.375rem; }
+  .form-control::-moz-placeholder {
+    color: inherit;
+    opacity: 0.5; }
+  .form-control::placeholder {
+    color: inherit;
+    opacity: 0.5; }
+    .theme-dark .form-control::-moz-placeholder {
+      color: #fff; }
+    .theme-dark .form-control::placeholder {
+      color: #fff; }
+  .form-control[readonly] {
+    opacity: 1;
+    border-color: rgba(117, 117, 117, 0.3);
+    background-color: rgba(210, 210, 210, 0.3); }
+    .theme-dark .form-control[readonly] {
+      border-color: rgba(210, 210, 210, 0.3);
+      background-color: rgba(117, 117, 117, 0.3); }
+  .form-control:disabled {
+    background-color: #d2d2d2;
+    border-color: #757575;
+    opacity: 0.3; }
+    .theme-dark .form-control:disabled {
+      background-color: #757575;
+      border-color: #d2d2d2; }
+
+.form-control-plaintext[readonly] {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  line-height: 1.5;
+  color: inherit;
+  background-color: transparent;
+  border: 0; }
+  .form-control-plaintext[readonly].form-control-sm {
+    padding-top: 0.5625rem;
+    padding-bottom: 0.5625rem; }
+  .form-control-plaintext[readonly].form-control-lg {
+    padding-top: 0.6875rem;
+    padding-bottom: 0.6875rem; }
+  .theme-dark .form-control-plaintext[readonly] {
+    background-color: transparent; }
+
+.form-control-sm {
+  height: 2.25rem;
+  padding: 0.5625rem 0.75rem;
+  font-size: 0.875rem; }
+
+.form-control-lg {
+  height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  font-size: 1.125rem; }
+
+textarea.form-control {
+  height: auto; }
+
+select.form-control {
+  padding: 0;
+  text-indent: 0.25rem; }
+  select.form-control[size], select.form-control[multiple] {
+    height: auto;
+    text-indent: 0; }
+    select.form-control[size] option, select.form-control[multiple] option {
+      padding: 0.625rem 0.75rem; }
+    select.form-control[size].form-control-sm option, select.form-control[multiple].form-control-sm option {
+      padding: 0.5625rem 0.75rem; }
+    select.form-control[size].form-control-lg option, select.form-control[multiple].form-control-lg option {
+      padding: 0.5625rem 0.75rem; }
+
+.form-control-file,
+.form-control-range {
+  display: block;
+  width: 100%; }
